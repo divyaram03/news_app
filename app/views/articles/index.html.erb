@@ -1,0 +1,34 @@
+<h1> <center> SFNEWS.COM </center> </h1>
+
+
+  <body>
+    <% @articles.each do |article| %>
+      <tr>
+        
+        
+          <td> <h3> <%= article.headline %> <%= link_to 'Show', article %> </h3> </td>
+
+    
+        
+
+        <td>
+          <p>
+            <i> <%= article.blurb %> </i>
+          </p>
+
+          </td>
+        
+        <td> <br> </td>
+        <td> <br> </td>
+          
+            
+        <td><%#= link_to 'Edit', edit_article_path(article) %></td>
+        <td><%#= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </body>
+
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>

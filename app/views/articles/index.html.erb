@@ -1,12 +1,13 @@
 <h1> <center> SFNEWS.COM </center> </h1>
-
+<br>
+<br>
 
   <body>
     <% @articles.each do |article| %>
       <tr>
         
         
-          <td> <h3> <%= article.headline %> <%= link_to 'Show', article %> </h3> </td>
+          <td> <h3> <%= link_to article.headline, article %> </h3> </td>
 
     
         
@@ -31,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
+<%#= link_to 'New Article', new_article_path %>
